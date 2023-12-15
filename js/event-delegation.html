@@ -1,0 +1,21 @@
+<html>
+<body>
+<div id="container">
+    <ul id="list">
+        <li><a href="http://domain1.com">Item #1</a></li>
+        <li><a href="/local/path/1">Item #2</a></li>
+        <li><a href="/local/path/2">Item #3</a></li>
+        <li><a href="http://domain4.com">Item #4</a></li>
+    </ul>
+</div>
+<script>
+    const anchorEl = document.querySelector('#list');
+    anchorEl.addEventListener('click', function(event) {
+        const anchor = event.target;
+        event.preventDefault();
+        if(anchor.tagName !== 'A') return;
+        console.log(anchor.innerText);
+    });
+</script>
+</body>
+</html>
